@@ -1,0 +1,56 @@
+{% extends 'posts/layout.html' %}
+
+{% block content %}
+
+<div class="container" style="margin-top: 100px">
+    <h1 class="display-4 text-center" style="margin-bottom: 100px">Plan your relocation</h1>
+    <form method="POST" id="mainform">
+        {% csrf_token %}
+
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead" style="margin-bottom: 30px">
+                    Where do you come from?
+                </p>
+            </div>
+            <div class="col-md-6 text-right">
+                {{ form.countries }}
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead" style="margin-bottom: 5px">Where do you plan to move to?</p>
+                <p class="lead" style="margin-bottom: 1px"><font size="2">For now we have only two possible choices. We are working on adding more countries!</font></p>
+                <p class="lead" style="margin-bottom: 20px"><font size="2">Please <a target="_blank" href="{% url 'subscribe' %}">subscribe</a> if you would like to be the first one to know when we add new countries.</font></p>
+            </div>
+            <div class="col-md-6">
+                <div class="dropdown show text-right">
+                    {{ form.destinations }}
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead" style="margin-bottom: 30px">How are you planning to move there?</p>
+            </div>
+
+
+            <div class="col-md-6 text-right">
+                {{ form.activities }}
+            </div>
+        </div>
+
+        <div class="container text-center">
+            <input type="submit" value="Get information" class="btn btn-default text-white" style="background-color: #320066; margin-top: 50px; margin-bottom: 100px">
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,17 @@
+{% extends 'posts/layout.html' %}
+
+{% block content %}
+<div class="container text-center" style="margin-top: 100px; margin-bottom: 200px">
+        <p class="lead text-center" style="margin-bottom: 20px">Our website helps people immigrate anywhere in the world! Just choose your country,
+            destination country and what are you planning to do in the destination country (studying, working, etc.) and
+            you will receive full information about documents you need, processes you should go through, tips, possible path to the citizenship,
+            useful addresses/phone numbers/email addresses.
+            Please keep in mind that our website is still work in progress. Currently only Poland is available as a destination country.
+            Please click on button below to start.
+        </p>
+        <a href="{% url 'plan_relocation' %}" class="btn btn-default text-white" style="background-color: #00CCCD; margin-top: 50px">Get information</a>
+        <p class="lead text-center" style="margin-top: 50px; margin-bottom: 100px">Don't forget to check out our blog and subscribe to our news!
+            Don't hesitate to contact us any time.
+        </p>
+    </div>
+{% endblock %}

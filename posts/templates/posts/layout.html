@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Help me immigrate</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../../static/js/jquery.js"></script>
+    <script src="../../static/js/popper.js"></script>
+    <script src="../../static/js/bootstrap.js"></script>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-default navbar-expand-lg fixed-top navbar-dark" style="background-image: linear-gradient(to right, #320066, #00CCCD)">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="/"><strong>Aliya's awesome company</strong></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #006691; float: right">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-au to mt-2 mt-lg-0">
+                    <li class="active">
+                        <a class="nav-link text-white text-center" href="{% url 'index' %}"><strong>Home</strong><span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white text-center" href="{% url 'about' %}"><strong>About</strong><span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white text-center" href="{% url 'plan_relocation' %}"><strong>Plan your relocation</strong><span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white text-center" href="{% url 'citizenship' %}"><strong>Citizenship information</strong><span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white text-center" href="{% url 'expat_blog' %}"><strong>Expat blog</strong><span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white text-center" href="{% url 'contact' %}"><strong>Contact</strong><span class="sr-only"></span></a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <!--<li class="dropdown">-->
+                        <!--<a class="nav-link dropdown-toggle text-white text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                            <!--<strong>EN</strong>-->
+                        <!--</a>-->
+                        <!--<div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #00CCCD">-->
+                            <!--<a class="dropdown-item text-white" href="#">PL</a>-->
+                            <!--<a class="dropdown-item text-white" href="#">RU</a>-->
+                            <!--<a class="dropdown-item text-white" href="#">DE</a>-->
+                            <!--<a class="dropdown-item text-white" href="#">FR</a>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                </ul>
+                <form method="GET" action="{% url 'search' %}" class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" name="q" value="{{request.GET.q}}" type="search" placeholder="Search in our blog" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <!-- Footer -->
+    <footer class="footer font-small" style="background-image: linear-gradient(to right, #320066, #00CCCD)">
+        <!-- Footer Links -->
+        <div class="container">
+            <!-- Grid row-->
+            <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+                <!-- Grid column -->
+                <div class="col-md-2 mb-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a class="text-white" href="{% url 'privacy_policy' %}">Privacy Policy</a>
+                    </h6>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-2 mb-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a class="text-white" href="{% url 'terms_of_use' %}">Terms of Use</a>
+                    </h6>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-2 mb-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a class="text-white" href="{% url 'subscribe' %}">Subscribe</a>
+                    </h6>
+                </div>
+            </div>
+            <!-- Grid row-->
+            <hr class="rgba-white-light" style="margin: 0 10%;">
+            <!-- Grid row-->
+            <div class="row d-flex text-center justify-content-center mb-md-0 mb-2">
+            </div>
+            <!-- Grid row-->
+            <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+            <!-- Grid row-->
+            <div class="row text-center d-flex justify-content-center pt-2 mb-3">
+                <!-- Grid column -->
+                <div class="col-md-0 mb-2">
+                    <a class="btn btn-block btn-social btn-facebook" target="_blank" href="https://www.facebook.com/aliya.tastemirova">
+                        <i class="fab fa-facebook-square text-white"></i>
+                    </a>
+                </div>
+                <div class="col-md-0 mb-2">
+                    <a class="btn btn-block btn-social btn-instagram" target="_blank" href="https://www.instagram.com/aliyatastemirova/">
+                        <i class="fab fa-instagram text-white"></i>
+                    </a>
+                </div>
+                <div class="col-md-0 mb-2">
+                    <a class="btn btn-block btn-social btn-linkedin" target="_blank" href="https://www.linkedin.com/in/aliyatastemirova/">
+                        <i class="fab fa-linkedin text-white"></i>
+                    </a>
+                </div>
+                <div class="col-md-0 mb-2">
+                    <a class="btn btn-block btn-social btn-email" target="_blank" href="mailto:aliya.tastemirova@gmail.com">
+                        <i class="far fa-envelope text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Grid column -->
+        </div>
+        <!-- Grid row-->
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-white">© 2018 Copyright: Aliya's awesome company
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>

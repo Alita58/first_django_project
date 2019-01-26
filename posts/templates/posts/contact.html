@@ -1,0 +1,50 @@
+{% extends 'posts/layout.html' %}
+
+{% block content %}
+<div class="container text-center" style="margin-top: 100px">
+    <h1 style="margin-bottom: 50px">Contact us</h1>
+    <form method="post">
+    {% csrf_token %}
+    <p class="lead text-center" style="margin-top: 20px; margin-bottom: 50px">
+        Please allow us up to 48h to respond.
+    </p>
+    {{ form.as_p }}
+
+    <div class="container text-center">
+        <button class="btn btn-default text-white" type="submit" style="background-color: #320066; margin-top: 20px; margin-bottom: 20px">Send</button>
+    </div>
+
+    </form>
+
+    <p class="lead text-center" style="margin-bottom: 20px">
+        Or you can contact us at: <strong><font size="20"></font><a href="mailto:test@test.io">test@test.io</a></strong>
+    </p>
+
+    <p class="lead text-center" style="margin-top: 30px; margin-bottom: 20px">
+        You can also reach out to us on social media:
+    </p>
+    <div class="row text-center d-flex justify-content-center pt-2 mb-3">
+        <!-- Grid column -->
+        <div class="col-md-0 mb-2">
+            <a class="btn btn-block btn-social btn-facebook" target="_blank" href="https://www.facebook.com/aliya.tastemirova">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+        </div>
+        <div class="col-md-0 mb-2">
+            <a class="btn btn-block btn-social btn-instagram" target="_blank" href="https://www.instagram.com/aliyatastemirova/">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="col-md-0 mb-2">
+            <a class="btn btn-block btn-social btn-linkedin" target="_blank" href="https://www.linkedin.com/in/aliyatastemirova/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <div class="col-md-0 mb-2">
+            <a class="btn btn-block btn-social btn-email" target="_blank" href="mailto:aliya.tastemirova@gmail.com">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

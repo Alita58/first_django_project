@@ -1,0 +1,108 @@
+{% extends 'posts/layout.html' %}
+
+{% block content %}
+
+<div class="container-fluid text-center" style="margin-top: 100px">
+    <h1 style="margin-bottom: 50px; margin-top: 50px">Here is everything you need to know</h1>
+    <p class="lead text-center" style="margin-bottom: 10px">
+            Your country: <strong>{{ country }}</strong>
+        </p>
+        <p class="lead text-center" style="margin-top: 10px; margin-bottom: 10px">
+            You want to immigrate to: <strong>{{ destination }}</strong>
+        </p>
+    <p class="lead text-center" style="margin-top: 10px; margin-bottom: 10px">
+            You plan to relocate through: <strong>{{ activity }}</strong>
+        </p>
+</div>
+
+<div class="container text-center" style="margin-top: 50px; margin-bottom: 50px">
+    <div class="accordion" id="accordion2">
+        <div class="card" style="background-color: white">
+            <div class="accordion-group">
+                <div class="card-header text-left" id="headingOne" style="border-bottom: 0px">
+                    <a class="accordion-toggle" data-toggle="collapse" href="#collapseOne">
+                       <h4 style="color: #03c1c7"><i class="fas fa-angle-down fa-fw menuIcon"></i>Documents you need</h4>
+                    </a>
+                </div>
+                <div id="collapseOne" class="accordion-body collapse in show">
+                    <div class="accordion-inner">
+                        <div class="card-body text-left">
+                            {{ information }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background-color: white">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <div class="card-header text-left" id="headingTwo" style="border-bottom: 0px">
+                        <a class="accordion-toggle" data-toggle="collapse" href="#collapseTwo">
+                            <h4 style="color: #03c1c7"><i class="fas fa-angle-down fa-fw menuIcon"></i>Processes</h4>
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="accordion-body collapse in show">
+                        <div class="accordion-inner">
+                            <div class="card-body text-left">
+                                Mama, just killed a man
+                                Put a gun against his head
+                                Pulled my trigger, now he's dead
+                                Mama, life had just begun
+                                But now I've gone and thrown it all away
+                                Mama, ooh, didn't mean to make you cry
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background-color: white">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <div class="card-header text-left" id="headingThree" style="border-bottom: 0px">
+                        <a class="accordion-toggle" data-toggle="collapse" href="#collapseThree">
+                            <h4 style="color: #03c1c7"><i class="fas fa-angle-down fa-fw menuIcon"></i>Possible paths</h4>
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="accordion-body collapse in show">
+                        <div class="accordion-inner">
+                            <div class="card-body text-left">
+                                If I'm not back again this time tomorrow
+                                Carry on, carry on as if nothing really matters
+                                Too late, my time has come
+                                Sends shivers down my spine, body's aching all the time
+                                Goodbye, everybody, I've got to go
+                                Gotta leave you all behind and face the truth
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background-color: white">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <div class="card-header text-left" id="headingFour">
+                        <a class="accordion-toggle" data-toggle="collapse" href="#collapseFour">
+                            <h4 style="color: #03c1c7"><i class="fas fa-angle-down fa-fw menuIcon"></i>Useful contact data</h4>
+                        </a>
+                    </div>
+                    <div id="collapseFour" class="accordion-body collapse in show">
+                        <div class="accordion-inner">
+                            <div class="card-body text-left">
+                                Mama, ooh, I don't want to die
+                                I sometimes wish I'd never been born at all
+                                I see a little silhouetto of a man
+                                Scaramouche, Scaramouche, will you do the Fandango
+                                Thunderbolt and lightning, very, very fright'ning me
+                                (Galileo) Galileo, (Galileo) Galileo, Galileo figaro magnifico
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
