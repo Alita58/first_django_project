@@ -9,7 +9,7 @@ from .models import (
 
 class PlanForm(forms.Form):
     countries = forms.ChoiceField(choices=tuple([(u'', "Select your country")] + list(Countries.objects.all().values_list('id', 'country'))), widget=forms.Select(attrs={'class': 'btn btn-secondary dropdown-toggle', 'style': "background-color: #00CCCD; width: 250px"}))
-    activities = forms.ChoiceField(choices=tuple([(u'', "Select your path")] + list(Activity.objects.all().values_list('id', 'activity'))), widget=forms.Select(attrs={'class': 'btn btn-secondary dropdown-toggle', 'style': "background-color: #00CCCD; width: 250px"}))
+    activities = forms.ChoiceField(choices=tuple([(u'', "Select your reason")] + list(Activity.objects.all().values_list('id', 'activity'))), widget=forms.Select(attrs={'class': 'btn btn-secondary dropdown-toggle', 'style': "background-color: #00CCCD; width: 250px"}))
     destinations = forms.ChoiceField(choices=tuple([(u'', "Select your destination")] + list(Destination.objects.all().values_list('id', 'destination'))), widget=forms.Select(attrs={'class': 'btn btn-secondary dropdown-toggle', 'style': "background-color: #00CCCD; width: 250px"}))
 
 
