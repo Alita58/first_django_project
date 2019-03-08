@@ -45,12 +45,15 @@ class PlanRelocation(View):
                 result = country_id + "_" + destination_id + "_" + activity_id
                 if not Text.objects.filter(option_key=result).exists():
                     return redirect('error_page')
-                result_text = Text.objects.values_list('text', flat=True).get(option_key=result)
+                result_text_full = Text.objects.values_list('text', flat=True).get(option_key=result)
                 context = {
                     'country': Countries.objects.get(pk=int(country_id)),
                     'destination': Destination.objects.get(pk=int(destination_id)),
                     'activity': Activity.objects.get(pk=int(activity_id)),
-                    'information': result_text
+                    "general_information": result_text_full.split("result_general_info_id")[1],
+                    "result_documents": result_text_full.split("result_documents_id")[1],
+                    "result_processes": result_text_full.split("result_processes_id")[1],
+                    "result_contact_data": result_text_full.split("result_contact_data_id")[1]
                 }
                 return render(request, 'posts/information.html', context)
             else:
